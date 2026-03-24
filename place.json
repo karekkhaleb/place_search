@@ -1,0 +1,74 @@
+{
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "2521 Post Oak Blvd, Houston, TX 77056, USA",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Starbucks Coffee Company",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103061254132286510240\">Aryan Hosseinzadeh</a>"
+          ],
+          "photo_reference": "ATCDNfWTfHLyh0ELZ_9bYzS2jlnUuzP4lwgdgiCMrYdI7yzQkjxmn34AUxeQkMM0DAPXDmdrW_qYw8919NwFpBPbxNjSaPLzHxKp22icREOfbgDlLw0XCz-kugxvS_e0ftBRyx6DkKnz0S3uVAb2I9y-fQ0D1WV7GACWXnbDmCwlR0zn1_B9DRFtXDvhDQk_woW8Vf0aAKckx8llRvSNCUcNRDbE8KaPb3qMEQyS0ie7jQ6bZPg0iI9SnhWW8KQKIMDE7a7IbYawkDz4c0NoeJyzVdXkRddkoDadW3B-AXcUJyJBX-KwswsyAdbD4xEB5jknKHoz-JMTq7swEBtfhcCMHckQyJ6uIFY8vtMiXUVQ-pY2-hxwdWw97JOujn2_b5Rxn484RQAL8JMn0Hc3QCMReGvRYqKfzRVIEEp5pTqrX43FEaDl",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJFVYSk2vBQIYRidRQqat7UVw",
+      "plus_code": {
+        "compound_code": "PGRQ+FP Westside, Houston, TX, USA",
+        "global_code": "76X6PGRQ+FP"
+      },
+      "price_level": 2,
+      "rating": 4,
+      "reference": "ChIJFVYSk2vBQIYRidRQqat7UVw",
+      "types": [
+        "cafe",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "restaurant",
+        "store"
+      ]
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "formatted_address": "2521 Post Oak Blvd, Houston, TX 77056, USA",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Starbucks Coffee Company",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103061254132286510240\">Aryan Hosseinzadeh</a>"
+          ],
+          "photo_reference": "ATCDNfWTfHLyh0ELZ_9bYzS2jlnUuzP4lwgdgiCMrYdI7yzQkjxmn34AUxeQkMM0DAPXDmdrW_qYw8919NwFpBPbxNjSaPLzHxKp22icREOfbgDlLw0XCz-kugxvS_e0ftBRyx6DkKnz0S3uVAb2I9y-fQ0D1WV7GACWXnbDmCwlR0zn1_B9DRFtXDvhDQk_woW8Vf0aAKckx8llRvSNCUcNRDbE8KaPb3qMEQyS0ie7jQ6bZPg0iI9SnhWW8KQKIMDE7a7IbYawkDz4c0NoeJyzVdXkRddkoDadW3B-AXcUJyJBX-KwswsyAdbD4xEB5jknKHoz-JMTq7swEBtfhcCMHckQyJ6uIFY8vtMiXUVQ-pY2-hxwdWw97JOujn2_b5Rxn484RQAL8JMn0Hc3QCMReGvRYqKfzRVIEEp5pTqrX43FEaDl",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJFVYSk2vBQIYRidRQqat7UVw",
+      "plus_code": {
+        "compound_code": "PGRQ+FP Westside, Houston, TX, USA",
+        "global_code": "76X6PGRQ+FP"
+      },
+      "price_level": 2,
+      "rating": 4,
+      "reference": "ChIJFVYSk2vBQIYRidRQqat7UVw",
+      "types": [
+        "cafe",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "restaurant",
+        "store"
+      ]
+    }
+  ]
+}
