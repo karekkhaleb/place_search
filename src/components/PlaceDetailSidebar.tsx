@@ -98,7 +98,7 @@ const PlaceDetailSidebar: React.FC<PlaceDetailSidebarProps> = ({ place, onClose 
         className="fixed inset-0 bg-black/30 z-40"
         onClick={onClose}
       />
-      <div className="fixed right-0 top-0 h-full w-80 bg-gray-800 shadow-2xl flex flex-col overflow-hidden border-l border-gray-700 z-50">
+      <div className="fixed right-0 top-0 h-full w-96 bg-gray-800 shadow-2xl flex flex-col overflow-hidden border-l border-gray-700 z-50">
         <div className="flex items-center justify-between p-4 border-b border-gray-700 bg-gray-800">
           <h2 className="text-lg font-semibold text-white truncate pr-4">
             {place.displayName.text}

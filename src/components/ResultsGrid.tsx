@@ -23,7 +23,7 @@ const ResultsGrid: React.FC<ResultsGridProps> = ({ results, onPlaceSelect }) => 
   }
 
   return (
-    <div>
+    <div className="max-w-2xl mx-auto">
       <p className="text-gray-400 mb-6 text-center">
         Found <span className="text-emerald-400 font-semibold">{results.length}</span> {results.length === 1 ? 'place' : 'places'}
       </p>
