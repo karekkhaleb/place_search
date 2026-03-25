@@ -23,37 +23,39 @@ const DetailRow: React.FC<DetailRowProps> = ({ label, value, onCopy, isLink }) =
   };
 
   return (
-    <div className="flex items-start gap-3 py-3 border-b border-gray-700 last:border-b-0 group hover:bg-gray-700/50 transition-colors rounded-lg px-2">
-      <span className="text-gray-400 text-sm w-24 flex-shrink-0 pt-1">{label}</span>
-      <div className="flex-1 min-w-0">
-        {isLink ? (
-          <a
-            href={value}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-emerald-400 hover:text-emerald-300 break-all hover:underline"
-          >
-            {value}
-          </a>
-        ) : (
-          <span className="text-white break-all">{value}</span>
-        )}
+    <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 py-3 border-b border-gray-700 last:border-b-0 group hover:bg-gray-700/50 transition-colors rounded-lg px-2 sm:px-0">
+      <span className="text-gray-400 text-sm w-full sm:w-24 flex-shrink-0">{label}</span>
+      <div className="flex-1 min-w-0 flex items-start gap-2 w-full">
+        <div className="flex-1 min-w-0">
+          {isLink ? (
+            <a
+              href={value}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-400 hover:text-emerald-300 break-all hover:underline text-sm sm:text-base"
+            >
+              {value}
+            </a>
+          ) : (
+            <span className="text-white break-all text-sm sm:text-base">{value}</span>
+          )}
+        </div>
+        <button
+          onClick={handleCopy}
+          className="flex-shrink-0 p-1.5 text-gray-500 hover:text-emerald-400 hover:bg-gray-600 rounded transition-colors"
+          title="Copy to clipboard"
+        >
+          {copied ? (
+            <svg className="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+          ) : (
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          )}
+        </button>
       </div>
-      <button
-        onClick={handleCopy}
-        className="flex-shrink-0 p-1.5 text-gray-500 hover:text-emerald-400 hover:bg-gray-600 rounded transition-colors"
-        title="Copy to clipboard"
-      >
-        {copied ? (
-          <svg className="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-        ) : (
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-          </svg>
-        )}
-      </button>
     </div>
   );
 };
@@ -98,9 +100,9 @@ const PlaceDetailSidebar: React.FC<PlaceDetailSidebarProps> = ({ place, onClose 
         className="fixed inset-0 bg-black/30 z-40"
         onClick={onClose}
       />
-      <div className="fixed right-0 top-0 h-full w-96 bg-gray-800 shadow-2xl flex flex-col overflow-hidden border-l border-gray-700 z-50">
+      <div className="fixed right-0 top-0 h-full w-full sm:w-96 bg-gray-800 shadow-2xl flex flex-col overflow-hidden border-l border-gray-700 z-50">
         <div className="flex items-center justify-between p-4 border-b border-gray-700 bg-gray-800">
-          <h2 className="text-lg font-semibold text-white truncate pr-4">
+          <h2 className="text-base sm:text-lg font-semibold text-white truncate pr-4">
             {place.displayName.text}
           </h2>
           <button

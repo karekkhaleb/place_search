@@ -17,23 +17,23 @@ const App: React.FC = () => {
         onClose={() => setSelectedPlace(null)}
       />
       
-      <div className="container mx-auto px-4 py-12">
-        <header className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <header className="text-center mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
               Place Search
             </span>
           </h1>
-          <p className="text-gray-400 text-lg max-w-xl mx-auto">
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-xl mx-auto">
             Search for restaurants, cafes, shops, and more.
           </p>
         </header>
 
         <SearchForm onSearch={search} isLoading={isLoading} />
 
-        <main className="mt-12">
+        <main className="mt-8 sm:mt-12">
           {error && (
-            <div className="max-w-2xl mx-auto mb-8 p-4 bg-red-900/30 border border-red-800 rounded-xl text-red-300 text-center">
+            <div className="max-w-2xl mx-auto mb-8 p-4 bg-red-900/30 border border-red-800 rounded-xl text-red-300 text-center text-sm sm:text-base">
               {error}
             </div>
           )}
@@ -45,9 +45,9 @@ const App: React.FC = () => {
           )}
         </main>
 
-        <footer className="mt-16 text-center text-gray-500 text-sm space-y-2">
+        <footer className="mt-12 sm:mt-16 text-center text-gray-500 text-xs sm:text-sm space-y-2">
           <p>Copyright &copy; {new Date().getFullYear()} Karekezi Caleb Buhungiro. All rights reserved.</p>
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4 flex-wrap">
             <a href="https://bcaleb.fun" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">
               Learn more about me
             </a>

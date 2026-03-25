@@ -14,20 +14,20 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch, isLoading }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-2xl mx-auto">
-      <div className="flex gap-3">
+    <form onSubmit={handleSubmit} className="w-full max-w-2xl mx-auto px-4 sm:px-0">
+      <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search for places (e.g., Starbucks in Houston TX)"
-          className="flex-1 px-5 py-4 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+          placeholder="Search for places..."
+          className="flex-1 px-4 py-3 sm:px-5 sm:py-4 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all text-base sm:text-inherit"
           disabled={isLoading}
         />
         <button
           type="submit"
           disabled={isLoading}
-          className="px-8 py-4 bg-emerald-600 hover:bg-emerald-500 disabled:bg-emerald-800 text-white font-semibold rounded-xl transition-all duration-200 flex items-center gap-2"
+          className="px-6 py-3 sm:px-8 sm:py-4 bg-emerald-600 hover:bg-emerald-500 disabled:bg-emerald-800 text-white font-semibold rounded-xl transition-all duration-200 flex items-center justify-center gap-2"
         >
           {isLoading ? (
             <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
