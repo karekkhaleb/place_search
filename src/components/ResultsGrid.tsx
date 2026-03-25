@@ -4,9 +4,10 @@ import PlaceCard from './PlaceCard';
 
 interface ResultsGridProps {
   results: Place[];
+  onPlaceSelect: (place: Place) => void;
 }
 
-const ResultsGrid: React.FC<ResultsGridProps> = ({ results }) => {
+const ResultsGrid: React.FC<ResultsGridProps> = ({ results, onPlaceSelect }) => {
   if (results.length === 0) {
     return (
       <div className="text-center py-16">
@@ -26,9 +27,13 @@ const ResultsGrid: React.FC<ResultsGridProps> = ({ results }) => {
       <p className="text-gray-400 mb-6 text-center">
         Found <span className="text-emerald-400 font-semibold">{results.length}</span> {results.length === 1 ? 'place' : 'places'}
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {results.map((place, index) => (
-          <PlaceCard key={`${place.place_id}-${index}`} place={place} />
+          <PlaceCard
+            key={index}
+            place={place}
+            onClick={() => onPlaceSelect(place)}
+          />
         ))}
       </div>
     </div>

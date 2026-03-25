@@ -1,14 +1,22 @@
 import React from 'react';
+import { Place } from './types';
 import SearchForm from './components/SearchForm';
 import ResultsGrid from './components/ResultsGrid';
 import LoadingState from './components/LoadingState';
+import PlaceDetailSidebar from './components/PlaceDetailSidebar';
 import usePlaceSearch from './hooks/usePlaceSearch';
 
 const App: React.FC = () => {
   const { results, isLoading, error, search } = usePlaceSearch();
+  const [selectedPlace, setSelectedPlace] = React.useState<Place | null>(null);
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
+      <PlaceDetailSidebar
+        place={selectedPlace}
+        onClose={() => setSelectedPlace(null)}
+      />
+      
       <div className="container mx-auto px-4 py-12">
         <header className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -33,7 +41,7 @@ const App: React.FC = () => {
           {isLoading ? (
             <LoadingState />
           ) : (
-            <ResultsGrid results={results} />
+            <ResultsGrid results={results} onPlaceSelect={setSelectedPlace} />
           )}
         </main>
 

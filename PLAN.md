@@ -10,13 +10,17 @@ A modern dark-themed React page with Tailwind CSS that allows users to search fo
 
 ## Components
 1. **SearchForm** - Input field + search button
-2. **PlaceCard** - Individual result card showing:
-   - Name, address, rating, price level
-   - Open/closed status badge
-   - Place type tags
-3. **ResultsGrid** - Responsive grid container (1-3 columns)
-4. **EmptyState** - Message when no results
-5. **LoadingState** - Spinner during fetch
+2. **PlaceCard** - Compact result card (clickable, opens detail sidebar):
+   - Name (from displayName.text), rating
+   - Address, phone number (truncated)
+3. **PlaceDetailSidebar** - Right-side drawer showing all place details:
+   - Dismissible via: X button, click outside overlay, Escape key
+   - Shows all fields: name, address, phone, rating, website
+   - Click copy icon next to any value to copy to clipboard
+   - Toast notification on copy
+4. **ResultsGrid** - Responsive grid container (1-4 columns)
+5. **EmptyState** - Message when no results
+6. **LoadingState** - Spinner during fetch
 
 ## State Management
 - `searchQuery` - User input
@@ -49,6 +53,7 @@ src/
   components/
     SearchForm.tsx
     PlaceCard.tsx
+    PlaceDetailSidebar.tsx
     ResultsGrid.tsx
   hooks/
     usePlaceSearch.ts
@@ -58,23 +63,19 @@ src/
   types.ts
 ```
 
-## Response Structure (from place.json)
+## Response Structure
 ```json
 {
   "results": [
     {
-      "business_status": "OPERATIONAL",
-      "formatted_address": "...",
-      "icon": "...",
-      "name": "...",
-      "opening_hours": { "open_now": true },
-      "photos": [{ "photo_reference": "...", "height": ..., "width": ... }],
-      "place_id": "...",
-      "plus_code": { "compound_code": "...", "global_code": "..." },
-      "price_level": 2,
-      "rating": 4,
-      "reference": "...",
-      "types": ["cafe", "food", ...]
+      "internationalPhoneNumber": "+1 713-454-0832",
+      "formattedAddress": "1450 Gulfgate Center Mall, Houston, TX 77087, USA",
+      "rating": 3.3,
+      "websiteUri": "https://www.starbucks.com/store-locator/store/12515/",
+      "displayName": {
+        "text": "Starbucks Coffee Company",
+        "languageCode": "en"
+      }
     }
   ]
 }
