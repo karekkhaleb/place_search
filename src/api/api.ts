@@ -1,6 +1,6 @@
 import { PlacesResponse } from '../types';
 
-const API_URL = 'https://n8n.bcaleb.fun/webhook/c8156f56-5349-4cb9-85e6-ef2feac2acc9';
+const API_URL = import.meta.env.VITE_API_URL;
 
 const searchPlaces = async (query: string): Promise<PlacesResponse> => {
   const response = await fetch(API_URL, {

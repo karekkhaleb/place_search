@@ -29,10 +29,11 @@ A modern dark-themed React page with Tailwind CSS that allows users to search fo
 - `error` - Error message (if any)
 
 ## API
-- **Endpoint**: `https://n8n.bcaleb.fun/webhook/c8156f56-5349-4cb9-85e6-ef2feac2acc9`
+- **Endpoint**: Stored in `VITE_API_URL` env variable
 - **Method**: POST
 - **Authentication**: Basic Auth (credentials stored in `.env`)
 - **Environment Variables**:
+  - `VITE_API_URL` - API endpoint URL
   - `VITE_API_USERNAME` - API username
   - `VITE_API_PASSWORD` - API password
 - **Body**: `{ "search": "<query>" }`

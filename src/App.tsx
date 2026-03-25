@@ -25,7 +25,7 @@ const App: React.FC = () => {
             </span>
           </h1>
           <p className="text-gray-400 text-lg max-w-xl mx-auto">
-            Discover and explore places around you. Search for restaurants, cafes, shops, and more.
+            Search for restaurants, cafes, shops, and more.
           </p>
         </header>
 
@@ -45,8 +45,17 @@ const App: React.FC = () => {
           )}
         </main>
 
-        <footer className="mt-16 text-center text-gray-500 text-sm">
-          <p>Powered by Google Places API</p>
+        <footer className="mt-16 text-center text-gray-500 text-sm space-y-2">
+          <p>Copyright &copy; {new Date().getFullYear()} Karekezi Caleb Buhungiro. All rights reserved.</p>
+          <div className="flex justify-center gap-4">
+            <a href="https://bcaleb.fun" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">
+              Learn more about me
+            </a>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/buhungiro-caleb-622016149/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">
+              LinkedIn
+            </a>
+          </div>
         </footer>
       </div>
     </div>
